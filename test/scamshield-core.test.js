@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 import {
   DETECTOR_DEFINITIONS,
   DRILLS,
@@ -406,4 +407,18 @@ test('detector table exposes all eight required tactics', () => {
     'credential-request',
     'family-emergency-script',
   ]);
+});
+
+test('print and touch rules ship without a meta frame-ancestors console warning', async () => {
+  const [html, css] = await Promise.all([
+    readFile(new URL('../index.html', import.meta.url), 'utf8'),
+    readFile(new URL('../styles.css', import.meta.url), 'utf8'),
+  ]);
+  const csp = /<meta[^>]+http-equiv="Content-Security-Policy"[^>]+content="([^"]+)"/i.exec(html)?.[1] ?? '';
+  assert.doesNotMatch(csp, /frame-ancestors/i);
+  assert.match(css, /@page\s*\{[^}]*margin:\s*13mm/s);
+  assert.match(css, /@media print\s*\{[\s\S]*\.intake-card,[\s\S]*display:\s*none !important/);
+  assert.match(css, /\.tactic-card\s*\{[^}]*break-inside:\s*avoid/s);
+  assert.match(css, /input,\s*select\s*\{[^}]*min-height:\s*44px/);
+  assert.match(css, /\.brand\s*\{[^}]*min-height:\s*44px/);
 });
