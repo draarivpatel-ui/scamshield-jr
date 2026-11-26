@@ -4,6 +4,7 @@ import {
   analyzeMessage,
   drillById,
   gradeDrill,
+  truncateCodePoints,
 } from './scamshield-core.js';
 
 const LOOKALIKE_SAMPLE = {
@@ -84,8 +85,7 @@ function escapeHtml(value) {
 }
 
 function truncate(value, length = 88) {
-  const text = String(value).replace(/\s+/g, ' ').trim();
-  return text.length > length ? `${text.slice(0, length - 1)}…` : text;
+  return truncateCodePoints(value, length);
 }
 
 function populateSamples() {

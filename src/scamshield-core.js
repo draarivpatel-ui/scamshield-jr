@@ -727,6 +727,12 @@ function gradeDrill(drillId, selectedTactics = [], declaredCategory = '') {
   };
 }
 
+function truncateCodePoints(value, length = 88) {
+  const text = String(value).replace(/\s+/g, ' ').trim();
+  const chars = Array.from(text);
+  return chars.length > length ? `${chars.slice(0, length - 1).join('')}…` : text;
+}
+
 export {
   DETECTOR_DEFINITIONS,
   DRILLS,
@@ -742,4 +748,5 @@ export {
   organizationHints,
   registrableDomain,
   sameDomainFamily,
+  truncateCodePoints,
 };

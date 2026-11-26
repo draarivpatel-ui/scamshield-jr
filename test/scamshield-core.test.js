@@ -15,6 +15,7 @@ import {
   organizationHints,
   registrableDomain,
   sameDomainFamily,
+  truncateCodePoints,
 } from '../src/scamshield-core.js';
 
 function tactic(result, id) {
@@ -421,4 +422,12 @@ test('print and touch rules ship without a meta frame-ancestors console warning'
   assert.match(css, /\.tactic-card\s*\{[^}]*break-inside:\s*avoid/s);
   assert.match(css, /input,\s*select\s*\{[^}]*min-height:\s*44px/);
   assert.match(css, /\.brand\s*\{[^}]*min-height:\s*44px/);
+});
+
+test('truncateCodePoints never splits an emoji surrogate pair', () => {
+  const emoji = '\uD83D\uDE00';
+  const truncated = truncateCodePoints(emoji.repeat(10), 5);
+  assert.equal(truncated, `${emoji.repeat(4)}…`);
+  assert.equal(Array.from(truncated).length, 5);
+  assert.equal(truncateCodePoints(`family ${emoji} emergency`, 88), `family ${emoji} emergency`);
 });

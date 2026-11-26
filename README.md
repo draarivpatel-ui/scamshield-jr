@@ -60,7 +60,7 @@ Open the printed local URL. The app itself is static and can also be deployed by
 
 ## Verification
 
-- `node --test` runs 39 tests with 143 deterministic assertion statements.
+- `node --test` runs 40 tests with 146 deterministic assertion statements.
 - `npm run check` drives headless Chrome through analyzer and drill interactions, checks same-origin resource loading and checks a 390 pixel mobile layout for horizontal overflow.
 - `npm run shots` captures three real 1440 by 900 PNG screenshots into `assets/`.
 
