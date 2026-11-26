@@ -36,7 +36,7 @@ Every positive rule returns exact matched spans. The interface highlights those 
 
 The app is static HTML, CSS and JavaScript. The rule engine is shared between the browser and Node tests. It uses deterministic regular expressions, domain normalization, lookalike-character mapping, attachment extension rules and drill grading logic. There are no runtime dependencies, no API keys, no analytics and no network calls.
 
-The test suite uses `node --test` on Node 22 or newer and contains 38 tests with 137 deterministic assertion statements. Headless-Chrome scripts capture screenshots and exercise the real interface.
+The test suite uses `node --test` on Node 22 or newer and contains 39 tests with 143 deterministic assertion statements. Headless-Chrome scripts capture screenshots and exercise the real interface.
 
 ## Challenges
 
