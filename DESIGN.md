@@ -36,3 +36,9 @@ One authored moment exists after analysis. A soft scan passes over the evidence 
 ## Accessibility
 
 The interface uses semantic forms, labels, buttons, fieldsets and live regions. Focus rings are thick and amber. The mobile layout collapses to one column and is checked for horizontal overflow. No meaning is carried by color alone because tactic cards also name severity in text.
+
+## Finish review and asset provenance
+
+Verdict is ship. The mechanical detector reports zero primary findings. Its one advisory flags the ruled paper texture as a repeating gradient; that texture is deliberate notebook evidence paper and is retained. The analyzer, evidence and drill screenshots were inspected at 1440 by 900 after capture, and the demo video was sampled at one frame per second before publication.
+
+All raster assets are screenshots of this project's own interface. The demo narration and video are generated for this project from the committed synthetic script. Atkinson Hyperlegible is the only third-party asset and ships with its SIL Open Font License text.

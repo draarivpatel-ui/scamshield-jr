@@ -1,0 +1,209 @@
+[
+ {
+  "do": "wait",
+  "ms": 700
+ },
+ {
+  "do": "move",
+  "selector": "#app-title",
+  "ms": 700
+ },
+ {
+  "do": "at",
+  "s": 5.4
+ },
+ {
+  "do": "move",
+  "selector": "#message-body",
+  "ms": 650
+ },
+ {
+  "do": "at",
+  "s": 10.8
+ },
+ {
+  "do": "move",
+  "selector": ".offline-pill",
+  "ms": 650
+ },
+ {
+  "do": "at",
+  "s": 13.4
+ },
+ {
+  "do": "move",
+  "selector": "#sample-select",
+  "ms": 650
+ },
+ {
+  "do": "at",
+  "s": 19.6
+ },
+ {
+  "do": "move",
+  "selector": "#sender",
+  "ms": 520
+ },
+ {
+  "do": "at",
+  "s": 21.2
+ },
+ {
+  "do": "move",
+  "selector": "#reply-to",
+  "ms": 520
+ },
+ {
+  "do": "at",
+  "s": 22.7
+ },
+ {
+  "do": "move",
+  "selector": "#message-body",
+  "ms": 520
+ },
+ {
+  "do": "at",
+  "s": 25.0
+ },
+ {
+  "do": "move",
+  "selector": ".verdict-panel",
+  "ms": 620
+ },
+ {
+  "do": "at",
+  "s": 30.2
+ },
+ {
+  "do": "scrollTo",
+  "selector": "#evidence-title",
+  "ms": 1300,
+  "offset": 24
+ },
+ {
+  "do": "at",
+  "s": 33.2
+ },
+ {
+  "do": "scrollBy",
+  "y": 330,
+  "ms": 1150
+ },
+ {
+  "do": "at",
+  "s": 39.8
+ },
+ {
+  "do": "scrollTo",
+  "selector": ".workbench",
+  "ms": 1200,
+  "offset": 0
+ },
+ {
+  "do": "at",
+  "s": 41.2
+ },
+ {
+  "do": "move",
+  "selector": ".residual-box",
+  "ms": 600
+ },
+ {
+  "do": "at",
+  "s": 45.0
+ },
+ {
+  "do": "move",
+  "selector": ".script-box",
+  "ms": 600
+ },
+ {
+  "do": "at",
+  "s": 49.9
+ },
+ {
+  "do": "click",
+  "selector": "#mode-drill"
+ },
+ {
+  "do": "at",
+  "s": 51.0
+ },
+ {
+  "do": "click",
+  "selector": "[data-drill-id='family-bail-secret']"
+ },
+ {
+  "do": "at",
+  "s": 53.8
+ },
+ {
+  "do": "click",
+  "selector": "#drill-tactics label:has(input[value='urgency-pressure'])"
+ },
+ {
+  "do": "at",
+  "s": 55.0
+ },
+ {
+  "do": "click",
+  "selector": "#drill-tactics label:has(input[value='payment-rail-switch'])"
+ },
+ {
+  "do": "at",
+  "s": 56.2
+ },
+ {
+  "do": "click",
+  "selector": "#drill-tactics label:has(input[value='family-emergency-script'])"
+ },
+ {
+  "do": "at",
+  "s": 57.4
+ },
+ {
+  "do": "click",
+  "selector": "[data-category='scam']"
+ },
+ {
+  "do": "at",
+  "s": 58.7
+ },
+ {
+  "do": "click",
+  "selector": "#grade-drill"
+ },
+ {
+  "do": "at",
+  "s": 61.8
+ },
+ {
+  "do": "scrollTo",
+  "selector": "#grade-panel",
+  "ms": 900,
+  "offset": 360
+ },
+ {
+  "do": "at",
+  "s": 64.0
+ },
+ {
+  "do": "move",
+  "selector": ".grade-result",
+  "ms": 600
+ },
+ {
+  "do": "at",
+  "s": 68.0
+ },
+ {
+  "do": "move",
+  "selector": "#grade-drill",
+  "ms": 550
+ },
+ {
+  "do": "at",
+  "s": 74.25
+ }
+]

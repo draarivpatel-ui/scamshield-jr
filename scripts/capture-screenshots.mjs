@@ -45,7 +45,7 @@ try {
 
   await page.evaluate(`window.__scamshield.loadSample('lookalike-payment')`);
   await sleep(420);
-  await page.evaluate(`document.querySelector('#evidence-title').scrollIntoView({ block: 'start' })`);
+  await page.evaluate(`document.querySelector('#evidence-title').scrollIntoView({ block: 'start' }); scrollBy(0, -18)`);
   await sleep(360);
   await capture('evidence-1440x900.png');
 
@@ -57,7 +57,7 @@ try {
   await page.evaluate(`window.__scamshield.chooseDrillCategory('scam')`);
   await page.evaluate(`window.__scamshield.gradeCurrentDrill()`);
   await sleep(300);
-  await page.evaluate(`document.querySelector('#drill-title').scrollIntoView({ block: 'start' })`);
+  await page.evaluate(`document.querySelector('#drill-title').scrollIntoView({ block: 'start' }); scrollBy(0, -18)`);
   await sleep(300);
   await capture('drill-1440x900.png');
 

@@ -1,0 +1,140 @@
+{
+ "sr": 24000,
+ "total": 74.72,
+ "lead": 0.6,
+ "gap_sent": 0.3,
+ "gap_para": 0.75,
+ "tail": 1.0,
+ "seed": 1,
+ "overall_rms": 0.09946988523006439,
+ "overall_peak": 0.9399999976158142,
+ "words": 155,
+ "sentences": [
+  {
+   "para": 0,
+   "sent": 0,
+   "text": "ScamShield Jr is an offline scam message explainer for families.",
+   "dur": 4.56,
+   "words": 10,
+   "rms": 0.10683136433362961,
+   "start": 0.6
+  },
+  {
+   "para": 0,
+   "sent": 1,
+   "text": "It helps a student slow down a suspicious message with a grandparent.",
+   "dur": 4.84,
+   "words": 12,
+   "rms": 0.10324686020612717,
+   "start": 5.46
+  },
+  {
+   "para": 1,
+   "sent": 0,
+   "text": "The examples are synthetic.",
+   "dur": 2.16,
+   "words": 4,
+   "rms": 0.1001923680305481,
+   "start": 11.05
+  },
+  {
+   "para": 1,
+   "sent": 1,
+   "text": "The analyzer never sends anything away and never decides that a message is safe.",
+   "dur": 5.6,
+   "words": 14,
+   "rms": 0.113615021109581,
+   "start": 13.51
+  },
+  {
+   "para": 2,
+   "sent": 0,
+   "text": "In this locked account example, the engine finds a countdown, a password request, a mismatched sender domain, and a different reply-to domain.",
+   "dur": 9.96,
+   "words": 22,
+   "rms": 0.11718538403511047,
+   "start": 19.86
+  },
+  {
+   "para": 3,
+   "sent": 0,
+   "text": "Each verdict points to exact evidence.",
+   "dur": 2.72,
+   "words": 6,
+   "rms": 0.09129686653614044,
+   "start": 30.57
+  },
+  {
+   "para": 3,
+   "sent": 1,
+   "text": "The marks show the matched characters, the field, and the offsets that fired the rule.",
+   "dur": 5.96,
+   "words": 15,
+   "rms": 0.12040121108293533,
+   "start": 33.59
+  },
+  {
+   "para": 4,
+   "sent": 0,
+   "text": "The summary still names what the offline tool cannot check.",
+   "dur": 4.16,
+   "words": 10,
+   "rms": 0.1164313554763794,
+   "start": 40.3
+  },
+  {
+   "para": 4,
+   "sent": 1,
+   "text": "It cannot open a live link or prove who controls the sender account.",
+   "dur": 4.72,
+   "words": 13,
+   "rms": 0.11436952650547028,
+   "start": 44.76
+  },
+  {
+   "para": 5,
+   "sent": 0,
+   "text": "Drill mode gives the student six practice messages.",
+   "dur": 3.64,
+   "words": 8,
+   "rms": 0.10864901542663574,
+   "start": 50.23
+  },
+  {
+   "para": 5,
+   "sent": 1,
+   "text": "Three are scams and three are legitimate but suspicious, so judgment is practiced instead of memorized.",
+   "dur": 7.32,
+   "words": 16,
+   "rms": 0.10961650311946869,
+   "start": 54.17
+  },
+  {
+   "para": 6,
+   "sent": 0,
+   "text": "The safer outcome is a pause, a read aloud script, and a trusted phone call.",
+   "dur": 5.16,
+   "words": 15,
+   "rms": 0.11491800844669342,
+   "start": 62.24
+  },
+  {
+   "para": 6,
+   "sent": 1,
+   "text": "One limitation remains.",
+   "dur": 2.08,
+   "words": 3,
+   "rms": 0.10850559920072556,
+   "start": 67.7
+  },
+  {
+   "para": 6,
+   "sent": 2,
+   "text": "Families still verify the real message themselves.",
+   "dur": 3.64,
+   "words": 7,
+   "rms": 0.11908084899187088,
+   "start": 70.08
+  }
+ ]
+}
