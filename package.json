@@ -1,0 +1,17 @@
+{
+  "name": "scamshield-jr",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline deterministic scam-message explainer for families. Zero dependencies, zero network calls.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test --test-concurrency=1 test/",
+    "serve": "node scripts/serve.mjs",
+    "shots": "node scripts/capture-screenshots.mjs",
+    "check": "node scripts/browser-check.mjs"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

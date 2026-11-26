@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ScamShield Jr is an offline scam-message explainer that teaches families to inspect tactics and verify before acting.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; frame-ancestors 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>ScamShield Jr</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the analyzer</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="ScamShield Jr home">
+      <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+        <path d="M22 4 36 9v11c0 9.6-5.8 16.7-14 20C13.8 36.7 8 29.6 8 20V9l14-5Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M15 22.5 20 27l9-11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>ScamShield Jr</span>
+    </a>
+    <div class="offline-pill">
+      <span class="offline-dot" aria-hidden="true"></span>
+      Offline ready
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="workbench" aria-labelledby="app-title">
+      <div class="title-panel">
+        <h1 id="app-title">ScamShield Jr</h1>
+        <div class="mode-switch" role="tablist" aria-label="Choose analyzer or drill mode">
+          <button type="button" id="mode-analyze" role="tab" aria-selected="true" aria-controls="analyzer-section" data-mode="analyze">Analyze a message</button>
+          <button type="button" id="mode-drill" role="tab" aria-selected="false" aria-controls="drill-section" data-mode="drill">Practice drill</button>
+        </div>
+        <div class="notebook-tabs" aria-label="Analyzer facts">
+          <div class="notebook-tab">
+            <strong>8</strong>
+            <span>named tactic detectors</span>
+          </div>
+          <div class="notebook-tab">
+            <strong>2</strong>
+            <span>checks it cannot make</span>
+          </div>
+          <div class="notebook-tab">
+            <strong>0</strong>
+            <span>network calls</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="intake-card" id="analyzer-form" autocomplete="off">
+        <div class="form-head">
+          <h2>Message intake</h2>
+          <label class="sample-picker" for="sample-select">
+            <span>Synthetic sample</span>
+            <select id="sample-select" name="sample-select"></select>
+          </label>
+        </div>
+
+        <div class="field-grid">
+          <label for="channel">
+            <span>Channel</span>
+            <select id="channel" name="channel">
+              <option value="email">Email</option>
+              <option value="sms">SMS</option>
+              <option value="dm">Direct message</option>
+            </select>
+          </label>
+          <label for="display-name">
+            <span>Display name</span>
+            <input id="display-name" name="display-name" type="text" spellcheck="false" placeholder="BlueCrest Bank Security">
+          </label>
+          <label for="sender">
+            <span>Sender address or number</span>
+            <input id="sender" name="sender" type="text" spellcheck="false" placeholder="security@example.net">
+          </label>
+          <label for="reply-to">
+            <span>Reply-to address</span>
+            <input id="reply-to" name="reply-to" type="text" spellcheck="false" placeholder="optional">
+          </label>
+          <label for="attachments" class="wide-field">
+            <span>Attachment names</span>
+            <input id="attachments" name="attachments" type="text" spellcheck="false" placeholder="statement.pdf, photo.png">
+          </label>
+        </div>
+
+        <label class="body-field" for="message-body">
+          <span>Message body</span>
+          <textarea id="message-body" name="message-body" rows="8" spellcheck="false"></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button class="primary-action" type="submit">Analyze message</button>
+          <button class="secondary-action" type="button" id="clear-button">Clear</button>
+          <p>Use synthetic practice text only. Never paste a real password, one-time code or private account number.</p>
+        </div>
+      </form>
+
+      <aside class="verdict-panel" id="verdict-panel" aria-live="polite" aria-label="Analysis summary"></aside>
+    </section>
+
+    <section class="analyzer-results" id="analyzer-section" aria-labelledby="evidence-title">
+      <div class="evidence-panel">
+        <div class="section-heading-row">
+          <h2 id="evidence-title">Evidence notebook</h2>
+          <span class="scan-state" id="scan-state">Waiting for a message</span>
+        </div>
+        <div class="evidence-book" id="evidence-book"></div>
+      </div>
+      <div class="tactic-area">
+        <div class="section-heading-row">
+          <h2>Tactic verdicts</h2>
+          <span id="tactic-count">8 detectors</span>
+        </div>
+        <div class="tactic-grid" id="tactic-grid"></div>
+      </div>
+    </section>
+
+    <section class="drill-section" id="drill-section" hidden aria-labelledby="drill-title">
+      <div class="drill-layout">
+        <nav class="drill-list" aria-label="Synthetic drill messages">
+          <h2 id="drill-title">Practice drill</h2>
+          <div id="drill-buttons"></div>
+        </nav>
+        <article class="drill-stage">
+          <div class="drill-stage-head">
+            <h2 id="drill-case-title">Choose a drill</h2>
+            <button type="button" class="secondary-action" id="reset-drill">Reset answers</button>
+          </div>
+          <div class="drill-message" id="drill-message"></div>
+          <div class="drill-workarea">
+            <fieldset class="tactic-picker">
+              <legend>Which tactics do you see?</legend>
+              <div id="drill-tactics"></div>
+            </fieldset>
+            <fieldset class="category-picker">
+              <legend>How should this drill be read?</legend>
+              <div class="category-buttons" id="category-buttons">
+                <button type="button" data-category="scam">Scam pattern</button>
+                <button type="button" data-category="legitimate-but-suspicious">Legitimate but suspicious</button>
+              </div>
+            </fieldset>
+          </div>
+          <div class="drill-actions">
+            <button type="button" class="primary-action" id="grade-drill">Grade my read</button>
+          </div>
+          <div class="grade-panel" id="grade-panel" aria-live="polite"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>ScamShield Jr is a teaching prototype. It shows evidence and residual risk, then leaves the decision to the family.</p>
+  </footer>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+ScamShield Jr is an offline scam message explainer for families. It helps a student slow down a suspicious message with a grandparent.
+
+The examples are synthetic. The analyzer never sends anything away and never decides that a message is safe.
+
+In this locked account example, the engine finds a countdown, a password request, a mismatched sender domain, and a different reply-to domain.
+
+Each verdict points to exact evidence. The marks show the matched characters, the field, and the offsets that fired the rule.
+
+The summary still names what the offline tool cannot check. It cannot open a live link or prove who controls the sender account.
+
+Drill mode gives the student six practice messages. Three are scams and three are legitimate but suspicious, so judgment is practiced instead of memorized.
+
+The safer outcome is a pause, a read aloud script, and a trusted phone call. One limitation remains. Families still verify the real message themselves.
